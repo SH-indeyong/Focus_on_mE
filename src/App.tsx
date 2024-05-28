@@ -1,15 +1,21 @@
-import { useState } from 'react';
+import React from "react";
+import styled from "styled-components";
+import Home from "@pages/Home";
+import Logo from "@components/Logo";
+import MenuBar from "@components/MenuBar";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const App: React.FC = () => {
   return (
-    <>
-      <div className='card'>
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-      </div>
-    </>
+    <Container>
+      <Logo />
+      <Home />
+      <MenuBar />
+    </Container>
   );
-}
+};
+
+const Container = styled.div`
+  display: flex;
+`;
 
 export default App;
