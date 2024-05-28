@@ -7,7 +7,7 @@ const MenuBar: React.FC = () => {
   return (
     <MenuBarContiner>
       {menuItems.map((item, index) => (
-        <li key={index}>{item}</li>
+        <p key={index}>{item}</p>
       ))}
     </MenuBarContiner>
   );
@@ -19,6 +19,8 @@ const MenuBarContiner = styled.div`
   position: fixed;
   right: 0;
   top: 40vh;
+  font-family: "ethos-regular";
+  font-size: 16px;
 `;
 
 export default MenuBar;

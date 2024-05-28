@@ -17,10 +17,17 @@ const LogoContainer = styled.div`
   align-items: center;
   left: 2vw;
   top: 2vw;
+  gap: 1vh;
 `;
 
-const Title = styled.div``;
+const Title = styled.div`
+  font-family: "ethos-regular-italic";
+  font-size: 36px;
+`;
 
-const SubTitle = styled.div``;
+const SubTitle = styled.div`
+  font-family: "ethos-regular-italic";
+  font-size: 14px;
+`;
 
 export default Logo;
