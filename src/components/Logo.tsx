@@ -15,7 +15,7 @@ const LogoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  left: 2vw;
+  left: 5vw;
   top: 2vw;
   gap: 1vh;
 `;
