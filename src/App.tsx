@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Home from "@pages/Home";
-import Logo from "@components/Logo";
-import MenuBar from "@components/MenuBar";
+import Logo from "@components/header/Logo";
+import MenuBar from "@components/header/MenuBar";
 
 const App: React.FC = () => {
   return (

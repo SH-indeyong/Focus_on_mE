@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CameraImg from "@assets/camera.png";
-import SlideText from "@components/SlideText";
+import SlideText from "@pages/Home/SlideText";
 
 const Home: React.FC = () => {
   return (

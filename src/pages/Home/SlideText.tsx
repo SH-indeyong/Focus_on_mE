@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
+import Typography from "@components/ui/Typography/Typography";
 
 const texts: string[] = [
   "사용자 친화적인 서비스를 추구하는",
@@ -7,6 +8,7 @@ const texts: string[] = [
   "끈기있고 열정있는",
   "가치를 높이고 싶은",
 ];
+
 const SlideText: React.FC = () => {
   const [currentText, setCurrentText] = useState<string>(texts[0]);
   const [index, setIndex] = useState<number>(0);
@@ -21,7 +23,11 @@ const SlideText: React.FC = () => {
     return () => clearInterval(interval);
   }, [index]);
 
-  return <Text>{currentText}</Text>;
+  return (
+    <TextAnimation>
+      <Typography content={currentText} size={24} />
+    </TextAnimation>
+  );
 };
 
 const slideDown = keyframes`
@@ -42,9 +48,11 @@ const slideDown = keyframes`
   }
 `;
 
-const Text = styled.div`
+const TextAnimation = styled.div`
+  width: 30vw;
+  display: flex;
+  flex-direction: row-reverse;
   animation: ${slideDown} 3s ease-in-out infinite;
-  font-size: 24px;
 `;
 
 export default SlideText;
