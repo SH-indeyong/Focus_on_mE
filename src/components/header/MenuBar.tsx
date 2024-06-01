@@ -1,16 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const menuItems: string[] = ["home", "introduce", "project", "contact"];
+interface MenuBarProps {
+  currentSection: string;
+}
 
-const MenuBar: React.FC = () => {
-  return (
-    <MenuBarContiner>
-      {menuItems.map((item, index) => (
-        <p key={index}>{item}</p>
-      ))}
-    </MenuBarContiner>
-  );
+const MenuBar: React.FC<MenuBarProps> = ({ currentSection }) => {
+  return <MenuBarContiner>{currentSection}</MenuBarContiner>;
 };
 
 const MenuBarContiner = styled.div`
