@@ -27,23 +27,24 @@ const SlideText: React.FC = () => {
 const slideDown = keyframes`
   0% {
     opacity: 0;
-    transform: translateY(-100%);
+    transform: translateY(-10%);
   }
   10% {
     opacity: 1;
     transform: translateY(0);
   }
   90% {
-    opacity: 0;
+    opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: translateY(100%);
+    transform: translateY(30%);
   }
 `;
 
 const Text = styled.div`
-  animation: ${slideDown} 2.9s ease-in-out infinite;
+  animation: ${slideDown} 3s ease-in-out infinite;
+  font-size: 24px;
 `;
 
 export default SlideText;
