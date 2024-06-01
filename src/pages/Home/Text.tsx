@@ -9,7 +9,7 @@ const texts: string[] = [
   "가치를 높이고 싶은",
 ];
 
-const SlideText: React.FC = () => {
+const Text: React.FC = () => {
   const [currentText, setCurrentText] = useState<string>(texts[0]);
   const [index, setIndex] = useState<number>(0);
 
@@ -24,27 +24,44 @@ const SlideText: React.FC = () => {
   }, [index]);
 
   return (
-    <TextAnimation>
-      <Typography content={currentText} size={24} />
-    </TextAnimation>
+    <Container>
+      <Typography content="안녕하세요," size={24} />
+      <TextConainer>
+        <TextAnimation>
+          <Typography content={currentText} size={24} />
+        </TextAnimation>
+        <div>
+          <Typography content="오서현" size={56} />
+          <Typography content="입니다." size={24} />
+        </div>
+      </TextConainer>
+    </Container>
   );
 };
+
+export default Text;
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+`;
 
 const slideDown = keyframes`
   0% {
     opacity: 0;
-    transform: translateY(-10%);
+    transform: translateY(20%);
   }
   10% {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(30%);
   }
-  90% {
+  50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: translateY(30%);
+    transform: translateY(50%);
   }
 `;
 
@@ -55,4 +72,7 @@ const TextAnimation = styled.div`
   animation: ${slideDown} 3s ease-in-out infinite;
 `;
 
-export default SlideText;
+const TextConainer = styled.div`
+  display: flex;
+  gap: 10px;
+`;
